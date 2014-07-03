@@ -1,0 +1,28 @@
+//シャッフルのスクリプト
+
+<script type="text/javascript"><!--
+myData = new Array(//音楽ファイル);	
+for (i=0; i<31; i++) myData[i] = i+1;	// myData[0～30] に 1～31を順次セット
+for (i=0; i<; i++)//(選択された時間の範囲ないでシャッフルするように変更する){	// 500回 myData の内容をシャッフルする
+myA = Math.floor( Math.random() * 31 );	// 0～30 を決める
+myB = Math.floor( Math.random() * 31 );	// 0～30 を決める
+myBackup = myData[myA];	// myData の myA番目とmyB番目の内容を入れ替える
+myData[myA] = myData[myB];	
+myData[myB] = myBackup;	
+}	
+myCard = new Array(5);	
+for (i=0; i<5; i++) myCard[i] = myData[i];//(←選択した時間の近似値を求める	)// myDataの最初の５個を取り出す
+for (i=0; i<4; i++){	// ５枚のカードを昇順に並べ替える。
+for (j=i+1; j<5; j++){	
+if (myCard[i] > myCard[j]){	// 上の方がでかい？
+myBackup = myCard[i];	// 入れ替える
+myCard[i] = myCard[j];	
+myCard[j] = myBackup;	
+}	
+}	
+}	
+for(i=0; i<5; i++){	
+document.write("[",myCard[i],"]");	
+if (i < 4) document.write("-");	
+}	
+// --></script>
