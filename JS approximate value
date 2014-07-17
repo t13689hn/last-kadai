@@ -1,4 +1,4 @@
 <script language="JavaScript">
-  document.write(Math.sqrt("hour"*"hour"));
-  var hour = document.getElementById("hour")
+  document.write(Math.sqrt("time"*"time"));
+  var time = document.getElementById("")
 </script>
