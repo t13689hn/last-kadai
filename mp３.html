@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>playaudio2</title>
+ 
+</head>
+ 
+<body>
+ 
+<audio id="audio" controls>
+<source src="Sure tread.mp3">
+</audio><br>
+ 
+<input type="button" value="play" onclick="audio_play()">
+<input type="button" value="pause" onclick="audio_pause()">
+ 
+<script type="text/javascript">
+function audio_play() {
+   audio.play();
+}
+ 
+function audio_pause() {
+   audio.pause();
+}
+</script>
+ 
+</body>
+ 
+</html>
