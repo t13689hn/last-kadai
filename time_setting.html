@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 </head>
-<body>
+<body>  
 <header>
 
   <h1>再生時間設定</h1>
@@ -11,8 +11,9 @@
 
 <h4>再生時間はどのぐらいにする？</h4>
 
-<div class="hour">
-  <select id="sel_select">
+<div class="time">
+    <div class="hour">
+  <select id="sel_select1">
     <option>0</option>
     <option>1</option>
     <option>2</option>
@@ -25,7 +26,8 @@
     <option>9</option>
   </select>
   時間
-   <select id="sel_select">
+  <div class="minute">
+   <select id="sel_select2">
     <option>0</option>
     <option>1</option>
     <option>2</option>
@@ -88,7 +90,8 @@
     <option>59</option>
   </select>
   分
-  <select id="sel_select">
+  <div class="secound">
+  <select id="sel_select3">
     <option>0</option>
     <option>1</option>
     <option>2</option>
@@ -154,23 +157,10 @@
 
 </div>
   <section>
-        <form>
 
-           
-<a href="audio.html">決定</a>
-<script language="JavaScript">
-//var time = document.getElementById("hour"*360+"minute"*60+"secound");
-var sec=document.getElementById("second");
-console.log(sec);
-var showHelloWorldButton = document.getElementById("showHelloWorld");
-showHelloWorldButton.addEventListener("click", click());
-function click(){
-    var sec=document.getElementById("second");
-    console.log(sec);
-}
+<a href="audio.html" id="linkNext">決定</a>
 
-</script>  
-        </form>
+      
           
 
 
@@ -182,5 +172,18 @@ function click(){
 <footer>
   <a class="icon home" href="file:///C:/Users/ryosuke/Documents/GitHub/last-kadai/home.html">Home</a>
 </footer>
+<script type="text/javascript">
+//var time = document.getElementById("hour"*360+"minute"*60+"secound");
 
+document.querySelector("#linkNext").addEventListener("click", click);
+
+function click(event){
+    event.preventDefault();
+   var hour =((sel_select1.selectedIndex)*360);
+   var minute=(sel_select2.selectedIndex)*60);;
+   var secound=(sel_select3.selectedIndex);
+   var time = ("hour"+"minute"+"secound")
+}
+
+</script>
 </body>
