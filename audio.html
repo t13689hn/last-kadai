@@ -9,25 +9,57 @@
 <body>
  
 <audio id="audio" controls>
-<source src="Mr.Children.mp3">
+<source src="M1 Opening.mp3">
+	<source src="M2 Lock.mp3">
+		<source src="M3 Style HipHop.mp3">
+		
 </audio><br>
  
 <input type="button" value="play" onclick="audio_play()">
 <input type="button" value="pause" onclick="audio_pause()">
- 
+
+
 <script type="text/javascript">
-function audio_play() {
-   audio.play();
+var audio;
+var now_playing;
+var playlist=[
+	"M1 Opening.mp3",
+	"M2 Lock.mp3",
+	"M3 Style HipHop.mp3"
+	];
+
+
+function audio_play(playlist) {
+	audio=document.getElementById("audio");
+	now_playing=0;
+	audio.src = playlist[now_playing];
+	audio.play();
+   window.alert(playlist.length);
+
+   audio.addEventListener("ended", function(){
+   		now_playing = now_playing + 1;
+   		if(now_playing < playlist.length){
+			audio.src = playlist[now_playing];
+			audio.play();
+		}
+	}, false);
 }
- 
+
 function audio_pause() {
    audio.pause();
 }
+
+function createPlayList(){
+	return music;
+}
+
+function main(){
+	var list = createPlayList();
+	audio_play(list);
+}
+
 </script>
  
 </body>
-  <footer>
-  <a class="icon home" href="home.html">Home</a>
-</footer>
- 
+ <audio id="audio"></audio>
 </html>
