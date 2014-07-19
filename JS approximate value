@@ -1,4 +1,5 @@
 <script language="JavaScript">
   document.write(Math.sqrt("time"*"time"));
-  var time = document.getElementById("")
+  var time = document.getElementById("time")
+  console.log(document.write);
 </script>
