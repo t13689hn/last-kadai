@@ -9,7 +9,8 @@
 </header>
 
 
-<div class="hour">
+<div class="time">
+    <div class="hour">
   <select id="sel_select">
     <option>0</option>
     <option>1</option>
@@ -23,6 +24,7 @@
     <option>9</option>
   </select>
   時間
+  <div class="minute">
    <select id="sel_select">
     <option>0</option>
     <option>1</option>
@@ -86,6 +88,7 @@
     <option>59</option>
   </select>
   分
+  <div class="second">
   <select id="sel_select">
     <option>0</option>
     <option>1</option>
@@ -148,16 +151,24 @@
     <option>58</option>
     <option>59</option> 
   </select>
-  秒
+  秒aaaa
 
 </div>
   <section>
         <form>
           
-<button id="showHelloWorld" type="button"　href="file:///C:/Users/ryosuke/Documents/GitHub/last-kadai/audio.html">決定</button>
+<button id="showHelloWorld" type="button"　href="file:///C:/Users/ryosuke/Documents/GitHub/last-kadai/audio.html" onclick="click()">決定</button>
 <script language="JavaScript">
-var showHelloWorldButton = document.getElementById("hour");
-showHelloWorldButton.addEventListener("click", showHelloWorld);
+//var time = document.getElementById("hour"*360+"minute"*60+"secound");
+var sec=document.getElementById("second");
+console.log(sec);
+var showHelloWorldButton = document.getElementById("showHelloWorld");
+showHelloWorldButton.addEventListener("click", click());
+function click(){
+    var sec=document.getElementById("second");
+    console.log(sec);
+}
+
 </script>        
         </form>
           

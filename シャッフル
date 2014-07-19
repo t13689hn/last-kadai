@@ -25,4 +25,4 @@ for(i=0; i<5; i++){
 document.write("[",myCard[i],"]");	
 if (i < 4) document.write("-");	
 }	
-// --></script>
+ --></script>

@@ -215,7 +215,7 @@
 
           <!-- 再生 -->
           <div id="audio" data-title="再生" class="panel">
-            <audio id="audio" controls>
+            <audio id="playarray" controls>
         
 
                   </audio><br>
@@ -230,11 +230,11 @@
                  
 
                   function audio_play(playarray) {
-                    audio=document.getElementById("audio");
-                    now_playing=0;
+                    audio=document.getElementById("playarray");
+                    now_playing = 0;
                     audio.src = playarray[now_playing];
-                    audio.play();
-                    window.alert(playarray.length);
+                    audio.play(playarray);
+                  window.alert(playarray.length);
 
                     audio.addEventListener("ended", function(){
                       now_playing = now_playing + 1;
