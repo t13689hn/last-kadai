@@ -1,49 +1,275 @@
-
+<!doctype html>
 <html>
 <head>
-<title>App Framework</title>
-<link rel="stylesheet" type="text/css" href="http://cdn.app-framework-software.intel.com/2.1/af.ui.css" />
-<link rel="stylesheet" type="text/css" href="http://cdn.app-framework-software.intel.com/2.1/icons.css" />
-<script type="text/javascript" charset="utf-8" src="http://cdn.app-framework-software.intel.com/2.1/appframework.ui.min.js"></script>    
+  <title>DJ timer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/afui.custom.css">
 </head>
 <body> 
-<div id="afui">
-<div id="header"></div>
-<div id="content">
+ <div id="afui" class="ios7">
+ <div id="content">
+  <div id="home" data-title="ホーム" class="panel">
+    <h2>DJタイマー</h2>
+    <h4>あなたの設定した時間に最も近い再生時間をもつプレイリストを作成します。
+      <br>
+      タグボタンより再生を開始してください。</h4>
 
-<div class="panel">
-  <a class="button">Button1 </a>
-  <a class="button red">Red Button</a>
-  <a class="button icon home">Icon</a>
+      <ul class="list inset">
+        <li><a href="#tag">タグ</a></li>
+        <li><a href="#add_favorite">お気に入り</a></li>
+      </ul>
+    </div>
 
-<br>
+    <!-- タグづけ -->
+    <div id="tag" data-title="タグ付け" class="panel">       
 
-  <div class="button-grouped">
-    <a class="button">Button1 </a>
-    <a class="button">Button2 </a>
-    <a class="button">Button3 </a>
-  </div>
-<br style="clear:both">
+      <h4>いま、どんな曲を流したい？</h4>
+      <br>
+      <br>
 
-<br>
+      <input id="bbbbb" name="asdfasdf" value="2" type="checkbox"><label for="bbbbb">Happy</label>
+      <br>
+      <input id="bbbbb" name="asdfasdf" value="2" type="checkbox"><label for="bbbbb">Sad</label>
+      <br>
 
-  <div class="button-grouped vertical">
-    <a class="button">Button1 </a>
-    <a class="button">Button2 </a>
-    <a class="button">Button3 </a>
-  </div>
-<br style="clear:both">
+      <input id="bbbbb" name="asdfasdf" value="2" type="checkbox"><label for="bbbbb">Angry</label>
+      <br>
+      <br>
+      <br>
+      <li><a href="#time_setting">再生時間の設定</a></li>
+      
+     <footer>
+     <li><a class="icon home" href="#home">Home</a></li>
+    </footer>
+      </div>
 
-<br>
+    <!-- お気に入り -->
+    <!--
+    <div id="add_favorite" data-title="お気に入り" class="panel">
 
-  <div class="button-grouped flex">
-    <a class="button">Button1 </a>
-    <a class="button">Button2 </a>
-    <a class="button">Button3 </a>
-  </div></div>
+    </div>
+    <footer>
+      <li><a class="icon home" href="#home">Home</a></li>
+    </div>
+    -->
 
-</div>
-<div id="navbar"></div>
-</div>
-</body>
-</html>
+    <!-- 再生時間の設定 -->
+    <div id="time_setting" data-title="再生時間の設定" class="panel">
+      <h1>再生時間設定</h1>
+      <h4>再生時間はどのぐらいにする？</h4>
+
+      <div class="time">
+        <div class="hour">
+          <select id="sel_select1">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+          時間
+          <div class="minute">
+           <select id="sel_select2">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+            <option>32</option>
+            <option>33</option>
+            <option>34</option>
+            <option>35</option>                          
+            <option>36</option>
+            <option>37</option>
+            <option>38</option>
+            <option>39</option>
+            <option>40</option>
+            <option>41</option>
+            <option>42</option>
+            <option>43</option>
+            <option>44</option>
+            <option>45</option>
+            <option>46</option>
+            <option>47</option>
+            <option>48</option>
+            <option>49</option>
+            <option>50</option>
+            <option>51</option>
+            <option>52</option>
+            <option>53</option>
+            <option>54</option>
+            <option>55</option>
+            <option>56</option>
+            <option>57</option>
+            <option>58</option>
+            <option>59</option>
+          </select>
+          分
+          <div class="secound">
+            <select id="sel_select3">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+              <option>32</option>
+              <option>33</option>
+              <option>34</option>
+              <option>35</option>                          
+              <option>36</option>
+              <option>37</option>
+              <option>38</option>
+              <option>39</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+              <option>46</option>
+              <option>47</option>
+              <option>48</option>
+              <option>49</option>
+              <option>50</option>
+              <option>51</option>
+              <option>52</option>
+              <option>53</option>
+              <option>54</option>
+              <option>55</option>
+              <option>56</option>
+              <option>57</option>
+              <option>58</option>
+              <option>59</option> 
+            </select>
+            秒
+
+          </div>
+          <br>
+            <section>
+              <a class="button" id="Helloooo" href="#audio">決定</a>
+            </section>
+           <footer>
+            <li><a class="icon home" href="#home">Home</a></li>
+            </footer>
+          </div>
+
+          <!-- 再生 -->
+          <div id="audio" data-title="再生" class="panel">
+            <audio id="audio" controls>
+              <source src="M1 Opening.mp3">
+                <source src="M2 Lock.mp3">
+                  <source src="M3 Style HipHop.mp3">
+
+                  </audio><br>
+
+                  <input type="button" value="play" onclick="audio_play(playlist)">
+                  <input type="button" value="pause" onclick="audio_pause(playlist)">
+
+
+                  <script type="text/javascript">
+                  var audio;
+                  var now_playing;
+                  var playlist=[
+                  "M1 Opening.mp3",
+                  "M2 Lock.mp3",
+                  "M3 Style HipHop.mp3"
+                  ];
+
+
+                  function audio_play(playlist) {
+                    audio=document.getElementById("audio");
+                    now_playing=0;
+                    audio.src = playlist[now_playing];
+                    audio.play();
+                    window.alert(playlist.length);
+
+                    audio.addEventListener("ended", function(){
+                      now_playing = now_playing + 1;
+                      if(now_playing < playlist.length){
+                        audio.src = playlist[now_playing];
+                        audio.play();
+                      }
+                    }, false);
+                  }
+
+                  function audio_pause() {
+                   audio.pause();
+                 }
+
+
+                 </script>
+
+               </body>
+               <audio id="audio"></audio>
+               <footer>
+                <li><a class="icon home" href="#home">Home</a></li>
+              </footer>
+            </div>
+          </div>
+          </div>
+          <script src="time-set.js"></script> 
+          <script src="appframework.min.js"></script>    
+          <script src="appframework.ui.min.js"></script>    
+          <script src="af.plugins.min.js"></script> 
+        </body>
+        </html>
