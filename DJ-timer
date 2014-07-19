@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>DJ timer</title>
+  </head>
+  <body> 
+    <div id="afui" class="ios7">
+     
+        <div id="home" data-title="ホーム" class="panel">
+<h2>DJタイマー</h2>
+<h4>あなたの設定した時間に最も近い再生時間をもつプレイリストを作成します。
+<br>
+タグボタンより再生を開始してください。</h4>
+
+          <ul class="list inset">
+            <li><a href="#tag.html">タグ</a></li>
+            <li><a href="#add_favorite.html">お気に入り</a></li>
+          </ul>
+        </div>
+
+        <!-- タグづけ -->
+        <div id="tag" data-title="タグ付け" class="panel">       
+<h4>いま、どんな曲を流したい？</h4>
+  <br>
+<br>
+
+  <input id="bbbbb" name="asdfasdf" value="2" type="checkbox"><label for="bbbbb">Happy</label>
+<br>
+  <input id="bbbbb" name="asdfasdf" value="2" type="checkbox"><label for="bbbbb">Sad</label>
+  <br>
+
+  <input id="bbbbb" name="asdfasdf" value="2" type="checkbox"><label for="bbbbb">Angry</label>
+ <br>
+ <br>
+ <br>
+ <li><a href="#time_setting.html">再生時間の設定</a></li>
+  <li><a class="icon home" href="#home.html">Home</a></li>
+        </div>
+
+        <!-- お気に入り -->
+        <div id="add_favorite" data-title="お気に入り" class="panel">
+      
+    <button id="プレイリストをお気に入り登録" type="button">プレイリストをお気に入り登録</button>
+  </div>
+  <footer>
+  <li><a class="icon home" href="#home.html">Home</a></li>
+      </div>
+
+      <!-- フッタ -->
+      <div id="navbar">
+        <a href="#home" class="icon home">Home</a>
+        <a href="#icons" class="icon folder">アイコン</a>
+        <a href="#buttons" class="icon folder">ボタン</a>
+        <a href="#foxkeh-1" class="icon picture">フォクすけ</a>
+      </div>
+
+      <!-- サイドバー -->
+      <aside id="main-nav">
+        <ul class="list">
+          <li class="divider">App Frameworkについて</li>
+          <li><a href="#home">ホーム</a></li>
+          <li><a href="#icons">アイコンリスト</a></li>
+          <li><a href="#buttons">ボタンリスト</a></li>
+          <li class="divider">スライドショー</li>
+          <li><a href="#foxkeh-1">1枚目</a></li>
+          <li><a href="#foxkeh-2">2枚目</a></li>
+          <li><a href="#foxkeh-3">3枚目</a></li>
+          <li><a href="#foxkeh-4">4枚目</a></li>
+          <li><a href="#foxkeh-5">5枚目</a></li>
+          <li><a href="#foxkeh-6">6枚目</a></li>
+        </ul>
+      </aside>
+
+      <!-- スライドショーについてるフッタ -->
+      <footer id="footer-foxkeh">
+        <a href="#foxkeh-1">その1</a>
+        <a href="#foxkeh-2">その2</a>
+        <a href="#foxkeh-3">その3</a>
+        <a href="#foxkeh-4">その4</a>
+        <a href="#foxkeh-5">その5</a>
+        <a href="#foxkeh-6">その6</a>
+      </footer>
+      
+    </div>
+    <script src="time-set.js"></script> 
+  </body>
+</html>
