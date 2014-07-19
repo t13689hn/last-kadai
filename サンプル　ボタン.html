@@ -59,7 +59,7 @@
       <h1>再生時間設定</h1>
       <h4>再生時間はどのぐらいにする？</h4>
 
-      <div class="time">
+      <div class="jikan">
         <div class="hour">
           <select id="sel_select1">
             <option>0</option>
@@ -216,37 +216,30 @@
           <!-- 再生 -->
           <div id="audio" data-title="再生" class="panel">
             <audio id="audio" controls>
-              <source src="M1 Opening.mp3">
-                <source src="M2 Lock.mp3">
-                  <source src="M3 Style HipHop.mp3">
+        
 
                   </audio><br>
 
-                  <input type="button" value="play" onclick="audio_play(playlist)">
-                  <input type="button" value="pause" onclick="audio_pause(playlist)">
+                  <input type="button" value="play" onclick="audio_play(playarray)">
+                  <input type="button" value="pause" onclick="audio_pause(playarray)">
 
 
                   <script type="text/javascript">
                   var audio;
                   var now_playing;
-                  var playlist=[
-                  "M1 Opening.mp3",
-                  "M2 Lock.mp3",
-                  "M3 Style HipHop.mp3"
-                  ];
+                 
 
-
-                  function audio_play(playlist) {
+                  function audio_play(playarray) {
                     audio=document.getElementById("audio");
                     now_playing=0;
-                    audio.src = playlist[now_playing];
+                    audio.src = playarray[now_playing];
                     audio.play();
-                    window.alert(playlist.length);
+                    window.alert(playarray.length);
 
                     audio.addEventListener("ended", function(){
                       now_playing = now_playing + 1;
                       if(now_playing < playlist.length){
-                        audio.src = playlist[now_playing];
+                        audio.src = playarray[now_playing];
                         audio.play();
                       }
                     }, false);
